@@ -1,7 +1,11 @@
 package com.codex.eshop.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
@@ -59,6 +63,28 @@ public class SplashActivity extends AppCompatActivity {
                 .load(R.drawable.outline_add_shopping_cart_24)
                 .override(300)
                 .into(imageView);
+
+        new Handler(Looper.getMainLooper())
+                .postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        findViewById(R.id.Splash_progress_bar).setVisibility(View.VISIBLE);
+                    }
+                },1000);
+
+        new Handler(Looper.getMainLooper())
+                .postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        findViewById(R.id.Splash_progress_bar).setVisibility(View.INVISIBLE);
+                        /// /move mainactivity
+                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                        /// /
+                    }
+                },5000);
+
 
     }
 }
