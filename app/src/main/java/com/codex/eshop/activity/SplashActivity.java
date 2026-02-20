@@ -14,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.codex.eshop.R;
 import com.squareup.picasso.Picasso;
 
@@ -48,9 +49,15 @@ public class SplashActivity extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.splashLogo);
 
-        Picasso.get()
-                .load(R.drawable.ic_launcher_foreground)
-                .resize(300,300)
+//        Picasso.get()
+//                .load(R.drawable.outline_add_shopping_cart_24)
+//                .resize(300,300)
+//                .into(imageView);
+
+        Glide.with(this)
+                .asBitmap()
+                .load(R.drawable.outline_add_shopping_cart_24)
+                .override(300)
                 .into(imageView);
 
     }
