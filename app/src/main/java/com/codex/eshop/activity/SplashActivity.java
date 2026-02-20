@@ -6,6 +6,7 @@ import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.codex.eshop.R;
+import com.squareup.picasso.Picasso;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -44,7 +46,12 @@ public class SplashActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_splash);
 
+        ImageView imageView = findViewById(R.id.splashLogo);
 
+        Picasso.get()
+                .load(R.drawable.ic_launcher_foreground)
+                .resize(300,300)
+                .into(imageView);
 
     }
 }
