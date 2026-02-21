@@ -3,4 +3,12 @@
     <string name="fstbtnv">Submit</string>
     <string name="version">Version 1.0.0</string>
     <string name="appCopy">@CodeX(PVT).com</string>
+    <string name="side_nav_home_titele">Home</string>
+    <string name="side_nav_profile_titele">Profile</string>
+    <string name="side_nav_wishlist_titele">Wishlist</string>
+    <string name="side_nav_cart_titele">Cart</string>
+    <string name="side_nav_message_titele">Message</string>
+    <string name="side_nav_settings_titele">Settings</string>
+    <string name="side_nav_login_titele">Login</string>
+    <string name="side_nav_logout_titele">Logout</string>
 </resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group>
+        <item android:title="@string/side_nav_home_titele"/>
+        <item android:title="@string/side_nav_profile_titele"/>
+        <item android:title="@string/side_nav_wishlist_titele"/>
+        <item android:title="@string/side_nav_cart_titele"/>
+        <item android:title="@string/side_nav_message_titele"/>
+        <item android:title="@string/side_nav_settings_titele"/>
+    </group>
+
+    <group>
+        <item android:title="@string/side_nav_login_titele"/>
+        <item android:title="@string/side_nav_logout_titele"/>
+    </group>
+
+</menu>
