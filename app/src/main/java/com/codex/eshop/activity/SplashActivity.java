@@ -1,7 +1,11 @@
 package com.codex.eshop.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
@@ -14,6 +18,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.codex.eshop.R;
 import com.squareup.picasso.Picasso;
 
@@ -48,10 +53,38 @@ public class SplashActivity extends AppCompatActivity {
 
         ImageView imageView = findViewById(R.id.splashLogo);
 
-        Picasso.get()
-                .load(R.drawable.ic_launcher_foreground)
-                .resize(300,300)
+//        Picasso.get()
+//                .load(R.drawable.outline_add_shopping_cart_24)
+//                .resize(300,300)
+//                .into(imageView);
+
+        Glide.with(this)
+                .asBitmap()
+                .load(R.drawable.outline_add_shopping_cart_24)
+                .override(300)
                 .into(imageView);
+
+        new Handler(Looper.getMainLooper())
+                .postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        findViewById(R.id.Splash_progress_bar).setVisibility(View.VISIBLE);
+                    }
+                },1000);
+
+        new Handler(Looper.getMainLooper())
+                .postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        findViewById(R.id.Splash_progress_bar).setVisibility(View.INVISIBLE);
+                        /// /move mainactivity
+                        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                        /// /
+                    }
+                },5000);
+
 
     }
 }
