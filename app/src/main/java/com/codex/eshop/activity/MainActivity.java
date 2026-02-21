@@ -1,6 +1,7 @@
 package com.codex.eshop.activity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.codex.eshop.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,5 +24,22 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView imageView = findViewById(R.id.nav_Logo);
+        ImageView imageView1 = findViewById(R.id.menu_Logo);
+
+
+
+        Glide.with(this)
+                .asBitmap()
+                .load(R.drawable.applogo)
+                .override(100)
+                .into(imageView);
+
+        Glide.with(this)
+                .asBitmap()
+                .load(R.drawable.more_vert_24px)
+                .override(100)
+                .into(imageView1);
     }
 }

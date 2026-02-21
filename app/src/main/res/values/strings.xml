@@ -11,4 +11,5 @@
     <string name="side_nav_settings_titele">Settings</string>
     <string name="side_nav_login_titele">Login</string>
     <string name="side_nav_logout_titele">Logout</string>
+    <string name="edit_text_search_text">Search</string>
 </resources>

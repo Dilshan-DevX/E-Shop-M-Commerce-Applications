@@ -7,11 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/nav_Logo"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars"/>
+
+            <EditText
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
+                android:hint="@string/edit_text_search_text"
+                android:paddingStart="10dp"
+                android:background="@drawable/search_background"
+                android:drawableStart="@drawable/search_24px"/>
+
+            <ImageView
+                android:id="@+id/menu_Logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:menu="@menu/side_nav_menu"
+        app:headerLayout="@layout/side_nav_header"
         android:layout_gravity="start"
+        app:itemIconTint="@drawable/nav_custom_icon"
         />
 
 </androidx.drawerlayout.widget.DrawerLayout>
