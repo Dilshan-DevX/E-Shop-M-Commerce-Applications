@@ -3,17 +3,36 @@
 
 
     <group>
-        <item android:title="@string/side_nav_home_titele"/>
-        <item android:title="@string/side_nav_profile_titele"/>
-        <item android:title="@string/side_nav_wishlist_titele"/>
-        <item android:title="@string/side_nav_cart_titele"/>
-        <item android:title="@string/side_nav_message_titele"/>
-        <item android:title="@string/side_nav_settings_titele"/>
+        <item
+
+            android:icon="@drawable/home_24px"
+            android:title="@string/side_nav_home_titele"/>
+        <item
+            android:icon="@drawable/account_circle_24px"
+            android:title="@string/side_nav_profile_titele"/>
+        <item
+            android:icon="@drawable/favorite_24px"
+            android:title="@string/side_nav_wishlist_titele"/>
+        <item
+            android:icon="@drawable/shopping_cart_24px"
+            android:title="@string/side_nav_cart_titele"/>
+        <item
+            android:icon="@drawable/chat_24px"
+            android:title="@string/side_nav_message_titele"/>
+        <item
+            android:icon="@drawable/settings_24px"
+            android:title="@string/side_nav_settings_titele"/>
     </group>
 
     <group>
-        <item android:title="@string/side_nav_login_titele"/>
-        <item android:title="@string/side_nav_logout_titele"/>
+        <item
+            android:checked="true"
+            android:icon="@drawable/login_24px"
+            android:title="@string/side_nav_login_titele"/>
+        <item
+            android:icon="@drawable/logout_24px"
+            android:title="@string/side_nav_logout_titele"/>
     </group>
+
 
 </menu>
